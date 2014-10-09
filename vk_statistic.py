@@ -9,11 +9,7 @@ if os.name == 'nt':
     os.system('cls')
 else:
     os.system('clear')
-
-# try:
-#     os.system('setterm -cursor off')
-# except Exception:
-#     pass
+    os.system('setterm -cursor off')
 
 #Количество пользователей в выборке, по которой бдет оцениваться генеральная совокупность. Все uid генерируются
 #псевдослучайным образом.
@@ -66,10 +62,7 @@ for user in output:
     print('id%-9d    %s %s' % (uid, data['response'][0]['first_name'], data['response'][0]['last_name']))
 
 #Возвращаем курсор
-try:
+if os.name != 'nt':
     os.system('setterm -cursor on')
-except Exception:
-    pass
 
-#TODO сделать скрытие курсора в Windows
 #TODO посчитать нормальное количество элементов в выборке для нормальной оценки генеральной совокупности
