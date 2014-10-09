@@ -16,7 +16,7 @@ except Exception:
 
 #Количество пользователей в выборке, по которой бдет оцениваться генеральная совокупность. Все uid генерируются
 #псевдослучайным образом.
-num_in_sample = 5000
+num_in_sample = 6000
 one_percent = num_in_sample // 100
 percent = 1
 subscript = {}
