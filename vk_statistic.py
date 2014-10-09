@@ -5,14 +5,15 @@ import random
 import os
 
 #Для того, чтобы придать программе более эстетичный вид, почистим консоль и уберем курсор.
-try:
-    os.system('clear')
-except Exception:
+if os.name == 'nt':
     os.system('cls')
-try:
-    os.system('setterm -cursor off')
-except Exception:
-    pass
+else:
+    os.system('clear')
+
+# try:
+#     os.system('setterm -cursor off')
+# except Exception:
+#     pass
 
 #Количество пользователей в выборке, по которой бдет оцениваться генеральная совокупность. Все uid генерируются
 #псевдослучайным образом.
